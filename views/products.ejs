@@ -1,0 +1,109 @@
+<%- include('headers/headers.prod.ejs')%>
+
+<body>
+    <h1>Productos</h1>
+    <br>
+   <p> <h3 id="dataUser"></h3>  <button id="exit">salir</button>  </p>
+    <button id="getProd">Traer</button>
+    <br>
+    <br>
+        <table border="1">
+            <tr>
+                <th>Id producto</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Descripcion</th>
+                <th>Calificacion</th>
+                <th>Marca</th>
+                <th>Origen</th>
+                <th>Activo</th>
+              </tr>
+            <% for(var i=0; i < resultProd.length; i++) { %>
+               <tr>
+                <td><%= resultProd[i].id_product %></td>
+                <td><%= resultProd[i].name %></td>
+                <td><%= resultProd[i].price %> $</td>
+                <td><%= resultProd[i].description %></td>
+                <td><%= resultProd[i].qualification %></td>
+                <td><%= resultProd[i].brand %></td>
+                <td><%= resultProd[i].origin %></td>
+                <td><%= resultProd[i].active %></td>
+                 <td><button id='<%= resultProd[i].id_product %>'onClick="deleteProduct(this.id)" >Eliminar</button></td>
+               </tr>
+            <% } %>
+        </table>            
+<br>
+
+<h2>Crear</h2>
+
+    <form id="form1" accept-charset="UTF-8" action = "http://127.0.0.1:3000/products" method="post"> 
+        <p>Nombre: <input type="text" name="name" size="30"></p>
+        <p>Precio: $ <input type="text" name="price" /></p> 
+        <p>Descripcion: <input type="text" name="desc" size="30"></p>
+        <p>Imagen: <input type="file" name="image" /></p>
+        <p>Calificacion: <input type="text" name="quali" size="30"></p>
+        <p>Marca: <input type="text" name="brand" size="30"></p>
+        <p>Categoria:
+          <select name="categ">
+            <option value="high_end">high_end</option>
+            <option value="mid_end">mid_end</option>
+            <option value="budget_end">budget_end</option>
+            <option value="gpu">gpu</option>
+            <option value="monitores">monitores</option>
+            <option value="procesadores">procesadores</option>
+            <option value="mouse">mouse</option>
+            <option value="teclados">almacenamiento</option>
+            <option value="powerSuply">powerSuply</option>
+            <option value="headsets">cables</option>
+            <option value="headsets">teclados</option>
+            <option value="headsets">headsets</option>
+            <option value="impresoras">impresoras</option>
+            <option value="escaneres">escaneres</option>
+            <option value="routers">routers</option>
+            <option value="usb">usb</option>
+          </select>
+        </p>
+        <p>Stock: <input type="text" name="stock" size="30"></p>
+        <input type = "submit"value = "Crear">
+      </form>
+<br>
+
+<h2>Actualizar</h2>
+
+<form id="form2" accept-charset="UTF-8" action = "http://127.0.0.1:3000/products/update" method="post"> 
+    <p>Id producto: <input type="text" name="id" size="30"></p>
+    <p>Nombre: <input type="text" name="name" size="30"></p>
+    <p>Precio: $ <input type="text" name="price" /></p> 
+    <p>Descripcion: <input type="text" name="desc" size="30"></p>
+    <p>Imagen: <input type="file" name="image" /></p>
+    <p>Calificacion: <input type="text" name="quali" size="30"></p>
+    <p>Marca: <input type="text" name="brand" size="30"></p>
+    <p>Categoria:
+      <select name="categ">
+        <option value="high_end">high_end</option>
+        <option value="mid_end">mid_end</option>
+        <option value="budget_end">budget_end</option>
+        <option value="gpu">gpu</option>
+        <option value="monitores">monitores</option>
+        <option value="procesadores">procesadores</option>
+        <option value="mouse">mouse</option>
+        <option value="teclados">almacenamiento</option>
+        <option value="powerSuply">powerSuply</option>
+        <option value="headsets">cables</option>
+        <option value="headsets">teclados</option>
+        <option value="headsets">headsets</option>
+        <option value="impresoras">impresoras</option>
+        <option value="escaneres">escaneres</option>
+        <option value="routers">routers</option>
+        <option value="usb">usb</option>
+      </select>
+    </p>
+    <p>Stock: <input type="text" name="stock" size="30"></p>
+    <input type = "submit" value = "Actualizar">
+  </form>
+<br>
+
+    <script src="/assets/modulos/products.ejs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<%- include('headers/index.header.ejs')%>
+
+	<body>
+		<header>
+			<%- include('navbar.ejs')%>
+		</header>
+
+		<div class="row ">
+			<div class="col-3">
+				<!-- <side bar> -->
+				<%- include('sidebar.ejs')%>
+			</div>
+			<main class="col-9 ">
+				<div class="container marketing">
+					<h1 class=" text-center TrendProducts ">Nuestros Productos Tendencia</h1>
+					<div class="row ">
+						<!-- Three columns of text below the carousel -->
+						<div class="row ">
+						</div>
+						<!-- /.row -->
+						<div id='product-container'>
+						</div>
+					</div>
+				</div>
+			</main>
+			<!-- FOOTER -->
+			<%- include('footer.ejs')%>
+		</div>
+		<script src="./assets/modulos/index.js "></script>
+		<script src="./assets/modulos/Cart.js "></script>
+		<script src="./assets/dist/js/sidebars.js "></script>
+		<script src="./assets/dist/js/bootstrap.bundle.min.js "></script>
+	</body>
+
+	</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Registro Usuario</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./assets/dist/css/carousel.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Super Store</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./LocalProducts.html">Local Products</a>
+                        </li>
+                    </ul>
+                    <!-- <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+    <h1 class="text-center TrendProducts mt-4">Registro</h1>
+         <form id="formReg" class="row g-3 m-5" accept-charset="UTF-8" action = "http://localhost:3000/users/register" method="post"> 
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label" >Names</label>
+            <input type="text" name="names" class="form-control" >
+          </div> 
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label" >Last Names</label>
+            <input type="text" name="last_names" class="form-control" >
+          </div>
+          <div class="col-md-6">
+              <label for="inputEmail4" class="form-label" >Email</label>
+              <input type="email" name="email" class="form-control" >
+            </div>
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label" >User Name</label>
+              <input type="text" name="userName" class="form-control" >
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Phone number</label>
+              <input type="text" name="phone_number" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Password</label>
+              <input type="password" name="password" class="form-control">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Billing_address</label>
+              <input type="text" name="billing_address" class="form-control" placeholder="1234 Main St">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Delivery_address</label>
+              <input type="text" name="delivery_address" class="form-control" placeholder="Apartment, studio, or floor">
+            </div>
+            <!-- <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div> -->
+            <div class="col-12">
+                <input class="btn btn-primary" style="width:150px" type = "submit"value = "Crear">
+                <!-- <button type="submit" class="btn btn-primary">Sign in</button> -->
+            </div>
+          </form>
+
+
+        <!-- FOOTER -->
+        <footer class="container">
+            <p>&copy; 2021–2021 Super Store, Inc.
+                <!-- <a href="#">&middot; Privacy</a> &middot; <a href="#">Terms</a> -->
+            </p>
+        </footer>
+
+
+    <script src=".//assets/modulos/index.js"></script>
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

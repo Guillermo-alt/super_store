@@ -1,0 +1,547 @@
+{
+	"openapi": "3.0.1",
+	"info": {
+		"title": "Super Store",
+		"description": "Tecla tienda virtual",
+		"version": "0.1"
+	},
+	"servers": [
+		{
+			"url": "http://127.0.0.1:3000"
+		},
+		{
+			"url": "http://localhost:3000"
+		}
+	],
+	"paths": {
+		"/users/register": {
+			"post": {
+				"description": "",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"password": {
+										"type": "string"
+									},
+									"delivery_address": {
+										"type": "string"
+									},
+									"names": {
+										"type": "string"
+									},
+									"last_names": {
+										"type": "string"
+									},
+									"phone_number": {
+										"type": "string"
+									},
+									"billing_address": {
+										"type": "string"
+									},
+									"userName": {
+										"type": "string"
+									},
+									"email": {
+										"type": "string"
+									}
+								}
+							},
+							"examples": {
+								"0": {
+									"value": "{\n\t\"names\": \"Alejandro\",\n\t\"last_names\":\"esquivel\",\n\t\"email\": \"alexmail@mail.com\",\n\t\"userName\":\"alex01\",\n\t\"phone_number\":\"1234567890\",\n\t\"password\":\"pass12\",\n\t\"billing_address\":\"direction1\",\n\t\"delivery_address\":\"direction2\"\n}"
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"text/html; charset=UTF-8": {
+								"schema": {
+									"type": "string"
+								},
+								"examples": {}
+							}
+						}
+					}
+				},
+				"servers": [
+					{
+						"url": "http://localhost:3000"
+					}
+				]
+			},
+			"servers": [
+				{
+					"url": "http://localhost:3000"
+				}
+			]
+		},
+		"/user/orders": {
+			"get": {
+				"description": "",
+				"responses": {
+					"500": {
+						"description": "",
+						"content": {
+							"text/html; charset=utf-8": {
+								"schema": {
+									"type": "string"
+								},
+								"examples": {}
+							}
+						}
+					}
+				},
+				"servers": [
+					{
+						"url": "http://127.0.0.1:3000"
+					}
+				]
+			},
+			"post": {
+				"description": "",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"password": {
+										"type": "string"
+									},
+									"role": {
+										"type": "string"
+									},
+									"email": {
+										"type": "string"
+									}
+								}
+							},
+							"examples": {
+								"0": {
+									"value": "{\n\t\"email\": \"alexmail@mail.com\",\n\t\"password\":\"pass12\",\n\t\"role\":\"user\"\n}"
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"500": {
+						"description": "",
+						"content": {
+							"text/html; charset=utf-8": {
+								"schema": {
+									"type": "string"
+								},
+								"examples": {}
+							}
+						}
+					}
+				},
+				"servers": [
+					{
+						"url": "http://127.0.0.1:3000"
+					}
+				]
+			},
+			"servers": [
+				{
+					"url": "http://127.0.0.1:3000"
+				}
+			]
+		},
+		"/user/update": {
+			"post": {
+				"description": "",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"password": {
+										"type": "string"
+									},
+									"delivery_address": {
+										"type": "string"
+									},
+									"names": {
+										"type": "string"
+									},
+									"last_names": {
+										"type": "string"
+									},
+									"phone_number": {
+										"type": "string"
+									},
+									"billing_address": {
+										"type": "string"
+									},
+									"userName": {
+										"type": "string"
+									},
+									"email": {
+										"type": "string"
+									}
+								}
+							},
+							"examples": {
+								"0": {
+									"value": "{\n\t\"names\": \"Alejandro\",\n\t\"last_names\":\"esquivel de jesus\",\n\t\"email\": \"alexmail@mail.com\",\n\t\"userName\":\"alex01\",\n\t\"phone_number\":\"5555555555\",\n\t\"password\":\"pass12\",\n\t\"billing_address\":\"direction1\",\n\t\"delivery_address\":\"direction2\"\n}"
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json; charset=utf-8": {
+								"schema": {
+									"type": "string"
+								},
+								"examples": {}
+							}
+						}
+					}
+				},
+				"servers": [
+					{
+						"url": "http://localhost:3000"
+					}
+				]
+			},
+			"servers": [
+				{
+					"url": "http://localhost:3000"
+				}
+			]
+		},
+		"/product/:id": {
+			"get": {
+				"description": "",
+				"responses": {
+					"500": {
+						"description": "",
+						"content": {
+							"application/json; charset=utf-8": {
+								"schema": {
+									"type": "string"
+								},
+								"examples": {}
+							}
+						}
+					}
+				},
+				"servers": [
+					{
+						"url": "http://127.0.0.1:3000"
+					}
+				]
+			},
+			"put": {
+				"description": "",
+				"responses": {
+					"404": {
+						"description": "",
+						"content": {
+							"text/html; charset=utf-8": {
+								"schema": {
+									"type": "string"
+								},
+								"examples": {}
+							}
+						}
+					}
+				},
+				"servers": [
+					{
+						"url": "http://127.0.0.1:3000"
+					}
+				]
+			},
+			"servers": [
+				{
+					"url": "http://127.0.0.1:3000"
+				}
+			]
+		},
+		"/user": {
+			"get": {
+				"description": "",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json; charset=utf-8": {
+								"schema": {
+									"type": "string"
+								},
+								"examples": {}
+							}
+						}
+					}
+				},
+				"servers": [
+					{
+						"url": "http://127.0.0.1:3000"
+					}
+				]
+			},
+			"delete": {
+				"description": "",
+				"responses": {
+					"500": {
+						"description": "",
+						"content": {
+							"text/html; charset=utf-8": {
+								"schema": {
+									"type": "string"
+								},
+								"examples": {}
+							}
+						}
+					}
+				},
+				"servers": [
+					{
+						"url": "http://localhost:3000"
+					}
+				]
+			},
+			"servers": [
+				{
+					"url": "http://127.0.0.1:3000"
+				},
+				{
+					"url": "http://localhost:3000"
+				}
+			]
+		},
+		"/user/orders/:id": {
+			"get": {
+				"description": "",
+				"responses": {
+					"500": {
+						"description": "",
+						"content": {
+							"text/html; charset=utf-8": {
+								"schema": {
+									"type": "string"
+								},
+								"examples": {}
+							}
+						}
+					}
+				},
+				"servers": [
+					{
+						"url": "http://127.0.0.1:3000"
+					}
+				]
+			},
+			"servers": [
+				{
+					"url": "http://127.0.0.1:3000"
+				}
+			]
+		},
+		"/adminProducts": {
+			"get": {
+				"description": "",
+				"responses": {
+					"200": {
+						"description": ""
+					}
+				},
+				"servers": [
+					{
+						"url": "http://127.0.0.1:3000"
+					}
+				]
+			},
+			"servers": [
+				{
+					"url": "http://127.0.0.1:3000"
+				}
+			]
+		},
+		"/products/:category": {
+			"get": {
+				"description": "",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json; charset=utf-8": {
+								"schema": {
+									"type": "string"
+								},
+								"examples": {}
+							}
+						}
+					}
+				},
+				"servers": [
+					{
+						"url": "http://127.0.0.1:3000"
+					}
+				]
+			},
+			"servers": [
+				{
+					"url": "http://127.0.0.1:3000"
+				}
+			]
+		},
+		"/products/update": {
+			"post": {
+				"description": "",
+				"responses": {
+					"500": {
+						"description": "",
+						"content": {
+							"application/json; charset=utf-8": {
+								"schema": {
+									"type": "string"
+								},
+								"examples": {}
+							}
+						}
+					}
+				},
+				"servers": [
+					{
+						"url": "http://127.0.0.1:3000"
+					}
+				]
+			},
+			"servers": [
+				{
+					"url": "http://127.0.0.1:3000"
+				}
+			]
+		},
+		"/users/login": {
+			"post": {
+				"description": "",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"password": {
+										"type": "string"
+									},
+									"role": {
+										"type": "string"
+									},
+									"userName": {
+										"type": "string"
+									},
+									"email": {
+										"type": "string"
+									}
+								}
+							},
+							"examples": {
+								"0": {
+									"value": "{\n\t\"email\": \"alexmail@mail.com\",\n\t\"userName\":\"alex01\",\n\t\"password\":\"pass12\",\n\t\"role\":\"user\"\n}"
+								}
+							}
+						}
+					}
+				},
+				"responses": {
+					"400": {
+						"description": "",
+						"content": {
+							"text/html; charset=utf-8": {
+								"schema": {
+									"type": "string"
+								},
+								"examples": {}
+							}
+						}
+					}
+				},
+				"servers": [
+					{
+						"url": "http://localhost:3000"
+					}
+				]
+			},
+			"servers": [
+				{
+					"url": "http://localhost:3000"
+				}
+			]
+		},
+		"/trendProducts": {
+			"get": {
+				"description": "",
+				"parameters": [
+					{
+						"name": "q",
+						"in": "query",
+						"schema": {
+							"type": "string"
+						},
+						"example": "grafica"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": ""
+					}
+				},
+				"servers": [
+					{
+						"url": "http://127.0.0.1:3000"
+					}
+				]
+			},
+			"servers": [
+				{
+					"url": "http://127.0.0.1:3000"
+				}
+			]
+		},
+		"/products": {
+			"post": {
+				"description": "",
+				"responses": {
+					"500": {
+						"description": "",
+						"content": {
+							"application/json; charset=utf-8": {
+								"schema": {
+									"type": "string"
+								},
+								"examples": {}
+							}
+						}
+					}
+				},
+				"servers": [
+					{
+						"url": "http://127.0.0.1:3000"
+					}
+				]
+			},
+			"servers": [
+				{
+					"url": "http://127.0.0.1:3000"
+				}
+			]
+		}
+	}
+}
